@@ -14,11 +14,11 @@ class UserRegisterView(View):
     form_class = UserRegistrationForm
     temp_name = 'accounts/register.html'
 
-    def dispatch(self, request, *args, **kwargs):
-        if request.user.is_authenticated:
-            return redirect('home:home')
-        else:
-            return super().dispatch(request, *args, **kwargs)
+    # def dispatch(self, request, *args, **kwargs):
+    #     if request.user.is_authenticated:
+    #         return redirect('home:home')
+    #     else:
+    #         return super().dispatch(request, *args, **kwargs)
 
     def get(self, request):
         form = self.form_class
@@ -89,11 +89,11 @@ class UserLoginView(View):
     temp_name = 'accounts/login.html'
     form_class = UserLoginForm
 
-    def dispatch(self, request, *args, **kwargs):
-        if request.user.is_authenticated:
-            return redirect('home:home')
-        else:
-            return super().dispatch(request, *args, **kwargs)
+    # def dispatch(self, request, *args, **kwargs):
+    #     if request.user.is_authenticated:
+    #         return redirect('home:home')
+    #     else:
+    #         return super().dispatch(request, *args, **kwargs)
 
     def get(self, request):
         form = self.form_class
