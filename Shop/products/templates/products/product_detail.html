@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="card mb-4">
+      <img class="card-img-top" src="{{ product.image.url }}" style="width: 18rem;" alt="">
+      <div class="card-body">
+        <h5 class="card-title">{{ product.name }}</h5>
+        <p class="card-text"> توضیحات: {{ product.description }} </p>
+        <p class="card-text"><small class="text-muted">آخرین بروزرسانی {{ product.created }}</small></p>
+        <p class="card-text"><small class="text-muted">قیمت {{ product.price }} ریال</small></p>
+      </div>
+      <div class="card-body">
+         <a href="#" class="card-link">افزودن به سبد خرید</a>
+      </div>
+    </div>
+
+{% endblock %}
